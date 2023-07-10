@@ -1,0 +1,24 @@
+Upstream statically links json_verify and json_reformat to libyajl.  This lets
+us link the tools to the shared lib. (Closes #544721)
+--- a/reformatter/CMakeLists.txt
++++ b/reformatter/CMakeLists.txt
+@@ -26,7 +26,7 @@
+ 
+ ADD_EXECUTABLE(json_reformat ${SRCS})
+ 
+-TARGET_LINK_LIBRARIES(json_reformat yajl_s)
++TARGET_LINK_LIBRARIES(json_reformat yajl)
+ 
+ # In some environments, we must explicitly link libm (like qnx,
+ # thanks @shahbag)
+--- a/verify/CMakeLists.txt
++++ b/verify/CMakeLists.txt
+@@ -26,7 +26,7 @@
+ 
+ ADD_EXECUTABLE(json_verify ${SRCS})
+ 
+-TARGET_LINK_LIBRARIES(json_verify yajl_s)
++TARGET_LINK_LIBRARIES(json_verify yajl)
+ 
+ # copy in the binary
+ GET_TARGET_PROPERTY(binPath json_verify LOCATION)

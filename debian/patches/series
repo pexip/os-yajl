@@ -1,0 +1,5 @@
+dynamically-link-tools.patch
+multiarch.patch
+CVE-2017-16516.patch
+CVE-2022-24795.patch
+CVE-2023-33460.patch
