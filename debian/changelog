@@ -1,16 +1,28 @@
-yajl (2.1.0-3+deb12u2) bookworm; urgency=medium
+yajl (2.1.0-5) unstable; urgency=medium
 
-  [Tobias Frost]
-  * Non-maintainer upload.
-  * Cherry pick John's CVE fixes from 2.1.0-4 and 2.1.0-5
+  * The patch for CVE-2023-33460 turned out to be incomplete.  Fix that.
+
+ -- John Stamp <jstamp@users.sourceforge.net>  Mon, 10 Jul 2023 15:08:58 -0700
+
+yajl (2.1.0-4) unstable; urgency=medium
+
+  [Debian Janitor]
+  * Apply multiarch hints.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository-Browse.
+  * Drop transition for old debug package migration.
+  * Set upstream metadata fields: Repository.
 
   [John Stamp]
   * Patch CVE-2017-16516 and CVE-2022-24795 (Closes: #1040036)
-  * The patch for CVE-2023-33460 turned out to be incomplete. Fix that. (Closes: #1039984)
+  * Bump Standards-Version to 4.6.2
+  * Bump debhelper compatibility to 13.
+  * Update source url in debian/copyright.
+  * Don't override dh_strip in debian/rules.  No longer needed.
 
- -- Tobias Frost <tobi@debian.org>  Mon, 10 Jul 2023 18:06:21 +0200
+ -- John Stamp <jstamp@users.sourceforge.net>  Sun, 09 Jul 2023 10:04:53 -0700
 
-yajl (2.1.0-3+deb12u1) bookworm; urgency=medium
+yajl (2.1.0-3.1) unstable; urgency=medium
 
   * Non-maintainer upload.
   * Import upstream patch for CVE-2023-33460. (Closes: #1039984)
