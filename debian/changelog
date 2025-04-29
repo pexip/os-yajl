@@ -1,3 +1,9 @@
+yajl (2.1.0-5+pexip25u1) pexip-trixie; urgency=medium
+
+  * Initial trixie build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Tue, 29 Apr 2025 23:00:25 +0100
+
 yajl (2.1.0-5) unstable; urgency=medium
 
   * The patch for CVE-2023-33460 turned out to be incomplete.  Fix that.
